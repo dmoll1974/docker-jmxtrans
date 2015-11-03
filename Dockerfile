@@ -11,7 +11,7 @@ ADD run-jmxtrans.sh /usr/bin/run-jmxtrans.sh
 
 RUN chmod +x /usr/bin/run-jmxtrans.sh
 
-ADD sources/jboss/jars/*  /usr/share/jmxtrans/jboss/
+ADD sources/jboss/jars/jboss-client.jar  /usr/share/jmxtrans/jboss/
 
 ADD sources/jboss.json /var/lib/jmxtrans/jboss.json
 

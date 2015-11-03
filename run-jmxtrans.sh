@@ -15,21 +15,22 @@ JMX_PORT=${JMX_PORT:-"2101"}
 LOG_LEVEL=${LOG_LEVEL:-"debug"}
 CONTINUE_ON_ERROR=${CONTINUE_ON_ERROR:-"false"}
 JMXTRANS_OPTS=${JMXTRANS_OPTS:-"-Djmxtrans.log.level=${LOG_LEVEL} -Djmxtrans.log.dir=$LOG_DIR"}
-CLASSPATH=/usr/share/jmxtrans/jboss/jboss-as-cli-7.1.1.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-as-controller-7.1.1.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-as-controller-client-7.1.1.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-as-protocol-7.1.1.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-dmr-1.1.1.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-logging-3.1.0.GA.jar:\
-/usr/share/jmxtrans/jboss/jboss-marshalling-1.3.11.GA.jar:\
-/usr/share/jmxtrans/jboss/jboss-marshalling-river-1.3.11.GA.jar:\
-/usr/share/jmxtrans/jboss/jboss-remoting-3.2.3.GA.jar:\
-/usr/share/jmxtrans/jboss/jboss-sasl-1.0.0.Final.jar:\
-/usr/share/jmxtrans/jboss/jboss-threads-2.0.0.GA.jar:\
-/usr/share/jmxtrans/jboss/remoting-jmx-1.0.2.Final.jar:\
-/usr/share/jmxtrans/jboss/staxmapper-1.1.0.Final.jar:\
-/usr/share/jmxtrans/jboss/xnio-api-3.0.3.GA.jar:\
-/usr/share/jmxtrans/jboss/xnio-nio-3.0.3.GA.jar 
+CLASSPATH=/usr/share/jmxtrans/jboss/jboss-client.jar
+#/usr/share/jmxtrans/jboss/jboss-as-cli-7.1.1.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-as-controller-7.1.1.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-as-controller-client-7.1.1.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-as-protocol-7.1.1.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-dmr-1.1.1.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-logging-3.1.0.GA.jar:\
+#/usr/share/jmxtrans/jboss/jboss-marshalling-1.3.11.GA.jar:\
+#/usr/share/jmxtrans/jboss/jboss-marshalling-river-1.3.11.GA.jar:\
+#/usr/share/jmxtrans/jboss/jboss-remoting-3.2.3.GA.jar:\
+#/usr/share/jmxtrans/jboss/jboss-sasl-1.0.0.Final.jar:\
+#/usr/share/jmxtrans/jboss/jboss-threads-2.0.0.GA.jar:\
+#/usr/share/jmxtrans/jboss/remoting-jmx-1.0.2.Final.jar:\
+#/usr/share/jmxtrans/jboss/staxmapper-1.1.0.Final.jar:\
+#/usr/share/jmxtrans/jboss/xnio-api-3.0.3.GA.jar:\
+#/usr/share/jmxtrans/jboss/xnio-nio-3.0.3.GA.jar 
 
 
 MONITOR_OPTS=${MONITOR_OPTS:-"-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=${JMX_PORT}  -Dcom.sun.management.jmxremote.rmi.port=${JMX_PORT} "}
